@@ -1,0 +1,506 @@
+/* ===== ADMIN PANEL RESPONSIVE STYLES ===== */
+
+/* Global Responsive Utilities */
+.responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.responsive-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.responsive-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Card Components */
+.card {
+  background: var(--color-bg-secondry);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;
+}
+
+/* Form Styles */
+.form-container {
+  background: var(--color-bg-secondry);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primery);
+}
+
+.form-button {
+  background-color: var(--color-primery);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: var(--color-secondry);
+}
+
+/* Table Styles */
+.table-container {
+  background: var(--color-bg-secondry);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.table-header {
+  background-color: var(--color-primery);
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Dashboard Widgets */
+.widget {
+  background: var(--color-bg-secondry);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.widget-icon {
+  font-size: 2.5rem;
+  color: var(--color-primery);
+  margin-bottom: 1rem;
+}
+
+.widget-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.widget-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primery);
+}
+
+/* Orders and Products Grid */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.item-card {
+  background: var(--color-bg-secondry);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-3px);
+}
+
+.item-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.item-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primery);
+  margin-bottom: 1rem;
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.btn-edit {
+  background-color: var(--color-primery);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+  background-color: var(--color-secondry);
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Global Mobile Adjustments */
+  .responsive-container {
+    padding: 0 0.5rem;
+  }
+  
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .responsive-flex {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Forms */
+  .form-container {
+    padding: 1rem;
+    margin: 0 -0.5rem;
+    border-radius: 0;
+  }
+  
+  .form-input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .form-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Widgets */
+  .widget {
+    padding: 1rem;
+  }
+  
+  .widget-icon {
+    font-size: 2rem;
+  }
+  
+  .widget-title {
+    font-size: 1rem;
+  }
+  
+  .widget-value {
+    font-size: 1.5rem;
+  }
+  
+  /* Items Grid */
+  .items-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  
+  .item-card {
+    padding: 1rem;
+  }
+  
+  .item-image {
+    height: 150px;
+  }
+  
+  .item-title {
+    font-size: 1rem;
+  }
+  
+  .item-price {
+    font-size: 1.1rem;
+  }
+  
+  .item-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Table Responsive */
+  .table-container {
+    margin: 0 -0.5rem;
+    border-radius: 0;
+  }
+  
+  .table-header {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Status Badges */
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  /* Modal Adjustments */
+  .modal-content {
+    width: 95% !important;
+    max-width: none !important;
+    margin: 1rem !important;
+  }
+  
+  /* DataGrid Mobile Overrides */
+  .MuiDataGrid-root {
+    border: none !important;
+    font-size: 12px !important;
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    background-color: var(--color-primery) !important;
+    color: white !important;
+    font-size: 10px !important;
+    min-height: 35px !important;
+  }
+  
+  .MuiDataGrid-cell {
+    font-size: 10px !important;
+    padding: 2px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+  
+  .MuiDataGrid-row {
+    max-height: none !important;
+    min-height: 35px !important;
+  }
+  
+  .MuiDataGrid-virtualScroller {
+    overflow-x: auto !important;
+  }
+  
+  .MuiDataGrid-footerContainer {
+    min-height: 40px !important;
+  }
+  
+  /* Material-UI Button Overrides */
+  .MuiButton-root {
+    font-size: 0.8rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+  
+  .MuiTextField-root {
+    margin-bottom: 1rem !important;
+  }
+  
+  .MuiCard-root {
+    margin: 0.5rem !important;
+    padding: 1rem !important;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card {
+    padding: 1.25rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+  }
+  
+  .widget {
+    padding: 1.25rem;
+  }
+  
+  .widget-icon {
+    font-size: 2.2rem;
+  }
+  
+  .item-image {
+    height: 180px;
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    font-size: 13px !important;
+  }
+  
+  .MuiDataGrid-cell {
+    font-size: 13px !important;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1025px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+/* Print Styles */
+@media print {
+  .bt-toolbar,
+  .header,
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .layoutContent {
+    margin-left: 0 !important;
+  }
+  
+  .layoutContentMain {
+    padding: 0 !important;
+  }
+  
+  .card,
+  .form-container,
+  .table-container {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primery: #1a1a1a;
+    --color-bg-secondry: #2d2d2d;
+    --color-text: #ffffff;
+    --box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .card,
+  .form-container,
+  .table-container {
+    border: 2px solid var(--color-primery) !important;
+  }
+  
+  .form-input {
+    border-width: 3px !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,57 @@
+.AppLayout {
+    color: var(--color-text);
+    background-color: var(--color-bg-primery);
+    display: flex;
+    min-height: 100vh;
+}
+
+.layoutContent {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    background-color: var(--color-bg-secondry);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease;
+}
+
+.layoutContentMain {
+    flex: 1;
+    padding: 30px;
+    overflow-x: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .AppLayout {
+        flex-direction: column;
+    }
+    
+    .layoutContent {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .layoutContentMain {
+        padding: 15px;
+        padding-top: 20px;
+    }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .layoutContent {
+        margin-left: var(--sidebar-width-tablet);
+    }
+    
+    .layoutContentMain {
+        padding: 20px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+    .layoutContentMain {
+        padding: 30px;
+    }
+}

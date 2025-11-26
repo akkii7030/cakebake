@@ -1,0 +1,210 @@
+/* Global Responsive Styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Mobile First Approach */
+@media (max-width: 768px) {
+  /* AppLayout Responsive */
+  .AppLayout {
+    flex-direction: column !important;
+    min-height: 100vh !important;
+  }
+  
+  .layoutContent {
+    margin-left: 0 !important;
+    width: 100% !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .layoutContentMain {
+    flex: 1 !important;
+    padding: 12px !important;
+    padding-bottom: 80px !important; /* Space for mobile nav */
+    background: #f8f9fa !important;
+  }
+  
+  /* Sidebar/Toolbar Responsive */
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+  }
+  
+  /* DataGrid Responsive */
+  .userList .MuiDataGrid-root {
+    width: 100% !important;
+    overflow-x: auto !important;
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    font-size: 12px !important;
+  }
+  
+  .MuiDataGrid-cell {
+    font-size: 12px !important;
+    padding: 4px !important;
+  }
+  
+  /* Orders Grid Responsive */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .container {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .card {
+    padding: 1rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  .dataGrid {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .dataGrid h3 {
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
+  }
+  
+  .dataGrid .info {
+    font-size: 12px !important;
+    word-break: break-word !important;
+  }
+  
+  /* Buttons Responsive */
+  .buttons {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  
+  .button {
+    width: 100% !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+  
+  /* Dashboard Responsive */
+  .home {
+    padding: 1rem !important;
+  }
+  
+  .homeWidgets {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  /* Forms Responsive */
+  .MuiTextField-root {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .MuiCard-root {
+    margin: 1rem !important;
+    padding: 1rem !important;
+  }
+  
+  /* Header Responsive */
+  .MuiToolbar-root {
+    flex-direction: column !important;
+    padding: 0.5rem !important;
+  }
+  
+  .MuiToolbar-root h5 {
+    font-size: 16px !important;
+    text-align: center !important;
+    margin-top: 0.5rem !important;
+  }
+  
+  /* User Title Container */
+  .userTitleContainer {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+  
+  .userTitle {
+    font-size: 20px !important;
+    margin: 0 !important;
+  }
+  
+  .userAddButton {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .layoutContent {
+    margin-left: 200px !important;
+  }
+  
+  .sidebar {
+    width: 200px !important;
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    font-size: 14px !important;
+  }
+  
+  .MuiDataGrid-cell {
+    font-size: 14px !important;
+  }
+}
+
+/* Desktop Responsive */
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Common Responsive Utilities */
+.responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.responsive-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.responsive-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Hide scrollbars on mobile */
+@media (max-width: 768px) {
+  .MuiDataGrid-virtualScroller::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .MuiDataGrid-virtualScroller::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .MuiDataGrid-virtualScroller::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+}

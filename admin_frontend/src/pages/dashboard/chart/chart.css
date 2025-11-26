@@ -1,0 +1,105 @@
+.chart {
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid rgba(218, 98, 125, 0.1);
+  overflow: hidden;
+}
+
+.chartTitle {
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.recharts-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .chart {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .chartTitle {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .chartContainer {
+    height: 250px;
+  }
+  
+  /* Hide chart labels on very small screens */
+  .recharts-cartesian-axis-tick-value {
+    font-size: 10px !important;
+  }
+  
+  .recharts-legend-wrapper {
+    font-size: 12px !important;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .chart {
+    padding: 20px;
+  }
+  
+  .chartTitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .chartContainer {
+    height: 280px;
+  }
+  
+  .recharts-cartesian-axis-tick-value {
+    font-size: 11px !important;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1025px) {
+  .chart {
+    padding: 25px;
+  }
+  
+  .chartContainer {
+    height: 350px;
+  }
+  
+  .recharts-cartesian-axis-tick-value {
+    font-size: 12px !important;
+  }
+}
+
+/* Chart responsive behavior */
+@media (max-width: 480px) {
+  .chartContainer {
+    height: 200px;
+  }
+  
+  .recharts-cartesian-axis-tick-value {
+    font-size: 8px !important;
+  }
+  
+  .recharts-legend-wrapper {
+    font-size: 10px !important;
+  }
+}

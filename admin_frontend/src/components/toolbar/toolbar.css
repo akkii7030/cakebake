@@ -1,0 +1,234 @@
+.bt-toolbar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--color-primery);
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.bt-toolbar-brand {
+  background-color: var(--color-bg-primery);
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bt-toolbar-brand img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.links ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.links li {
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.links li:hover {
+  background-color: var(--color-secondry);
+  transform: translateX(5px);
+}
+
+.links li:hover a {
+  color: var(--color-subtext);
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-text);
+  font-size: 18px;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.links a span {
+  white-space: nowrap;
+}
+
+.active {
+  background-color: var(--color-secondry);
+  color: var(--color-subtext);
+  border-radius: 1rem;
+}
+
+.active a {
+  color: var(--color-subtext);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .bt-toolbar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    background-color: var(--color-primery);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    z-index: 1001;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+  
+  .bt-toolbar.mobile-visible {
+    left: 0;
+  }
+  
+  .bt-toolbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: var(--color-secondry);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0;
+  }
+  
+  .bt-toolbar-brand img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .links {
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .links ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+  }
+  
+  .links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .links li:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: none;
+  }
+  
+  .links a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    font-size: 16px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .links a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+  }
+  
+  .links a span {
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  
+  .links svg {
+    font-size: 20px;
+    min-width: 20px;
+  }
+  
+  .active {
+    background-color: var(--color-secondry);
+    border-radius: 0;
+    margin: 0;
+  }
+  
+  .active a {
+    color: white;
+    background-color: transparent;
+  }
+}
+
+/* Tablet Navigation */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bt-toolbar {
+    width: var(--sidebar-width-tablet);
+  }
+  
+  .bt-toolbar-brand {
+    height: 90px;
+  }
+  
+  .bt-toolbar-brand img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .links a {
+    font-size: 16px;
+    padding: 0.7rem 0.8rem;
+  }
+}
+
+/* Desktop Navigation */
+@media (min-width: 1025px) {
+  .bt-toolbar {
+    width: var(--sidebar-width);
+  }
+  
+  .links a {
+    font-size: 18px;
+  }
+}
+
+/* Mobile overlay */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .mobile-overlay.active {
+    display: block;
+  }
+}

@@ -1,0 +1,222 @@
+.userTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.userTitle {
+  font-size: 1.8rem;
+  color: var(--color-primery);
+  margin: 0;
+}
+
+.userAddButton {
+  background-color: var(--color-primery);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.userAddButton:hover {
+  background-color: var(--color-secondry);
+}
+
+.userList {
+  width: 100%;
+  background-color: var(--color-bg-secondry);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.userListContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.column {
+  background-color: var(--color-secondry);
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+.userListUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userListUser img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userListEdit {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0.5rem;
+  color: var(--color-primery);
+  transition: color 0.3s ease;
+}
+
+.userListEdit:hover {
+  color: var(--color-secondry);
+}
+
+.userListDelete {
+  margin: 0.5rem;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.userListDelete:hover {
+  color: #c82333;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .userTitleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .userTitle {
+    font-size: 1.4rem;
+  }
+  
+  .userAddButton {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+  }
+  
+  .userList {
+    margin: 0 -15px;
+    border-radius: 0;
+  }
+  
+  .userListContainer {
+    padding: 0 15px;
+  }
+  
+  .column {
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+  
+  .userListUser {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+  
+  .userListUser img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .userListEdit,
+  .userListDelete {
+    font-size: 16px;
+    margin: 0.3rem;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  /* DataGrid mobile styles */
+  .MuiDataGrid-root {
+    border: none;
+    font-size: 12px;
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    background-color: var(--color-primery);
+    color: white;
+    font-size: 11px;
+    min-height: 40px;
+  }
+  
+  .MuiDataGrid-cell {
+    font-size: 11px;
+    padding: 4px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .MuiDataGrid-row {
+    max-height: none !important;
+  }
+  
+  .MuiDataGrid-virtualScroller {
+    overflow-x: auto;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .userTitle {
+    font-size: 1.6rem;
+  }
+  
+  .userAddButton {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  
+  .column {
+    font-size: 14px;
+  }
+  
+  .userListEdit,
+  .userListDelete {
+    font-size: 18px;
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    font-size: 13px;
+  }
+  
+  .MuiDataGrid-cell {
+    font-size: 13px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1025px) {
+  .userTitle {
+    font-size: 1.8rem;
+  }
+  
+  .column {
+    font-size: 16px;
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    font-size: 14px;
+  }
+  
+  .MuiDataGrid-cell {
+    font-size: 14px;
+  }
+}

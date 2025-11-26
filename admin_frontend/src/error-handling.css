@@ -1,0 +1,29 @@
+/* Error Handling Styles */
+.loading-container,
+.error-container,
+.no-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background: white;
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.loading-container {
+  color: #DA627D;
+}
+
+.error-container {
+  color: #dc3545;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-data-container {
+  color: #6c757d;
+}

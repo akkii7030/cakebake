@@ -1,0 +1,137 @@
+.featured {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.featuredItem {
+  padding: 25px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg-secondry);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(218, 98, 125, 0.1);
+}
+
+.featuredItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px -5px rgba(218, 98, 125, 0.3);
+}
+
+.featuredTitle {
+  font-size: 18px;
+  color: var(--color-text);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.featuredMoneyContainer {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.featuredMoney {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primery);
+}
+
+.featuredMoneyRate {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: rgba(40, 167, 69, 0.1);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.featuredMoneyRate.negative {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.featuredIcon {
+  font-size: 14px;
+  margin-right: 5px;
+  color: #28a745;
+}
+
+.featuredIcon.negative {
+  color: #dc3545;
+}
+
+.featuredSub {
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .featured {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .featuredItem {
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .featuredTitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .featuredMoney {
+    font-size: 24px;
+  }
+  
+  .featuredMoneyContainer {
+    margin: 12px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .featuredMoneyRate {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+  
+  .featuredSub {
+    font-size: 13px;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  
+  .featuredItem {
+    padding: 22px;
+  }
+  
+  .featuredTitle {
+    font-size: 17px;
+  }
+  
+  .featuredMoney {
+    font-size: 26px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1025px) {
+  .featured {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
